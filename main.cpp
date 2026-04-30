@@ -27,7 +27,7 @@ private:
         return node;
     }
 
-    // Memory-safe Yýkýcý Fonksiyon (Post-order traversal)
+    // Memory-safe yÄ±kÄ±cÄ± Fonksiyon (Post-order traversal)
     void destroyTree(Node* node) {
         if (node != NULL) {
             destroyTree(node->left);
@@ -40,13 +40,13 @@ private:
 public:
     BinarySearchTree() : root(NULL) {}
 
-    // Destructor (Yýkýcý Metot): Obje kapsam (scope) dýþýna çýkýnca OTOMATÝK çalýþýr.
+    // Destructor (YÄ±kÄ±cÄ± Metot): Obje kapsam (scope) dÄ±ÅŸÄ±na Ã§Ä±kÄ±nca otomatik Ã§alÄ±ÅŸÄ±r.
     ~BinarySearchTree() {
         cout << "\n\ntree tamamen bosaltiliyor...\n";
         destroyTree(root);
     }
 
-    // Kullanýcýya açýlan (Public) temiz arayüz
+    // KullanÄ±cÄ±ya aÃ§Ä±lan (Public) temiz arayÃ¼z
     void insert(int data) {
         root = insert(root, data);
         cout<<"\n"<<data<<" tree'ye yerlestirildi"; 
@@ -55,7 +55,6 @@ public:
 
 int main() {
     {
-        // Aðaç objesi bu süslü parantezler (scope) içinde yaþar
         BinarySearchTree bst;
         bst.insert(50);
         bst.insert(30);
